@@ -1,0 +1,109 @@
+[
+    {
+        "id": "82a133c8.fc209",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1e676785.7e32b8",
+        "type": "ui_text_input",
+        "z": "82a133c8.fc209",
+        "name": "",
+        "label": "Enter the content of your Lecture. (Press Enter to start )",
+        "tooltip": "",
+        "group": "3f55ef4a.37b78",
+        "order": 0,
+        "width": "14",
+        "height": "4",
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "e6cbb05a.25b57"
+            ]
+        ]
+    },
+    {
+        "id": "e6cbb05a.25b57",
+        "type": "watson-text-to-speech",
+        "z": "82a133c8.fc209",
+        "name": "Convert",
+        "lang": "en-US",
+        "langhidden": "en-US",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "voice": "en-US_EmilyV3Voice",
+        "voicehidden": "en-US_EmilyV3Voice",
+        "format": "audio/wav",
+        "password": "",
+        "apikey": "",
+        "payload-response": true,
+        "service-endpoint": "",
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "d61115ad.df8508"
+            ]
+        ]
+    },
+    {
+        "id": "d61115ad.df8508",
+        "type": "ui_audio",
+        "z": "82a133c8.fc209",
+        "name": "Play Audio",
+        "group": "3f55ef4a.37b78",
+        "voice": "en-US",
+        "always": true,
+        "x": 870,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2c654ca6.156d94",
+        "type": "ui_template",
+        "z": "82a133c8.fc209",
+        "group": "3f55ef4a.37b78",
+        "name": "image",
+        "order": 2,
+        "width": "14",
+        "height": "6",
+        "format": "<style>\n      .img-container {\n        text-align: center;\n      }\n    </style>\n<body>\n    <div class=\"img-container\">\n        <img src=\"https://us.123rf.com/450wm/antonioguillem/antonioguillem1706/antonioguillem170600095/80684062-casual-student-talking-with-headsets-and-a-red-laptop-in-a-video-conference-on-line-sitting-in-a-des.jpg?ver=6\" width=\"60%\" height=\"60%\" />\n        </div>\n    </body>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 310,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f55ef4a.37b78",
+        "type": "ui_group",
+        "z": "",
+        "name": "Lets start with the Lecture",
+        "tab": "4a01c0d.a502a4",
+        "order": 1,
+        "disp": true,
+        "width": "14",
+        "collapse": false
+    },
+    {
+        "id": "4a01c0d.a502a4",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Welcome to your Daily Lectures",
+        "icon": "school",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
